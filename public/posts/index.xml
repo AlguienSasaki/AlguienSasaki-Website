@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My Website</title>
+    <link>http://localhost:39151/posts/</link>
+    <description>Recent content in Posts on My Website</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 21 Apr 2026 10:38:48 -0600</lastBuildDate>
+    <atom:link href="http://localhost:39151/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rewriting my Neovim configs for the 3rd time.</title>
+      <link>http://localhost:39151/posts/3rd-neovim-rewrite/</link>
+      <pubDate>Tue, 21 Apr 2026 10:38:48 -0600</pubDate>
+      <guid>http://localhost:39151/posts/3rd-neovim-rewrite/</guid>
+      <description>Mi travesía reescribiendo mis dotfiles de neovim por 3ra vez pero ahora con lazyvim.</description>
+    </item>
+    <item>
+      <title>How to Install Coreboot/Libreboot in Thinkpad X280</title>
+      <link>http://localhost:39151/posts/x280libreboot/</link>
+      <pubDate>Sun, 05 Apr 2026 22:57:55 -0600</pubDate>
+      <guid>http://localhost:39151/posts/x280libreboot/</guid>
+      <description>Unnecesarily detailed tutorial on how to install libreboot/coreboot in the Thinkpad X280.</description>
+    </item>
+  </channel>
+</rss>
