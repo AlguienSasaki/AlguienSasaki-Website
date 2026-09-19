@@ -2,18 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spi on Mi sitio web.</title>
-    <link>http://localhost:39151/es/tags/spi/</link>
+    <link>http://localhost:1313/es/tags/spi/</link>
     <description>Recent content in Spi on Mi sitio web.</description>
     <generator>Hugo</generator>
     <language>es</language>
-    <lastBuildDate>Sun, 05 Apr 2026 22:57:55 -0600</lastBuildDate>
-    <atom:link href="http://localhost:39151/es/tags/spi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Apr 2026 22:57:55 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/es/tags/spi/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Como instalar Libreboot/Coreboot en el Thinkpad X280</title>
-      <link>http://localhost:39151/es/posts/x280libreboot/</link>
+      <title>Instalar Libreboot en Thinkpad X280</title>
+      <link>http://localhost:1313/es/posts/x280libreboot/</link>
+      <pubDate>Sun, 05 Apr 2026 22:57:55 -0800</pubDate>
+      <guid>http://localhost:1313/es/posts/x280libreboot/</guid>
+      <description>Guía a mi estilo para instalar Libreboot en un Thinkpad X280.</description>
+    </item>
+    <item>
+      <title>Respaldar BIOS en Thinkpad X280</title>
+      <link>http://localhost:1313/es/posts/x280biosbackup/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0600</pubDate>
-      <guid>http://localhost:39151/es/posts/x280libreboot/</guid>
-      <description>Proceso inncecesariamente detallado de como instalar tanto libreboot como coreboot en el thiknpad x280.</description>
+      <guid>http://localhost:1313/es/posts/x280biosbackup/</guid>
+      <description>Guía rapida de como respaldar el bios en un Thinkpad X280.</description>
+    </item>
+    <item>
+      <title>Pasos previos para coreboot y distros.</title>
+      <link>http://localhost:1313/es/posts/preptimecoreboot/</link>
+      <pubDate>Sun, 05 Apr 2026 22:57:55 -0400</pubDate>
+      <guid>http://localhost:1313/es/posts/preptimecoreboot/</guid>
+      <description>Pasos previos indispensables para poder instalar coreboot/libreboot/heads.</description>
     </item>
   </channel>
 </rss>

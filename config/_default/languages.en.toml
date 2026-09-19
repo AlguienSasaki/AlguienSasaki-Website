@@ -3,7 +3,7 @@ label = "English"
 direction = "ltr"
 weight = 1
 
-title = "My Website"
+title = "Alguien Sasaki's Vault"
 # copyright = "Copy, _right?_ :thinking_face:"
 
 [params]
@@ -15,12 +15,12 @@ title = "My Website"
 [params.author]
    name = "Alguien Sasaki"
    image = "face.png"
-   headline = "I'm just a linux enthusiast doing this for fun."
-   bio = "Unnecesary large text because why not"
+   headline = "I'm just a GNU/Linux enthusiast doing this for fun."
+   bio = "GNU/Linux enthusiast and content creator who shares configurations and personal projects on his website and repositories on open-source platforms."
    links = [
      { email = "alguiensasaki@gmail.com" },
      { github = "https://github.com/alguiensasaki" },
-     { linkedin = "https://linkedin.com/in/juan-josé-moreno-arenas-0979ab323/" },
+     { linkedin = "https://linkedin.com/in/alguiensasaki" },
      { youtube = "https://www.youtube.com/@AlguienSasakiMashups/videos" },
      { link = "https://alguiensasaki.net" },
   #   { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },

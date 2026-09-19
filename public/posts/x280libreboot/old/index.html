@@ -1,0 +1,1548 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>How to Install Coreboot/Libreboot in Thinkpad X280 &middot; My Website</title>
+    <meta name="title" content="How to Install Coreboot/Libreboot in Thinkpad X280 &middot; My Website" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.77a79972dfd1fba3e37eaab972e5cf479aea24376fc39d827f5760735ebc834e.css"
+    integrity="sha256-d6eZct/R&#43;6Pjfqq5cuXPR5rqJDdvw52Cf1dgc168g04="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+    
+    
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="http://localhost:1313/js/main.bundle.min.ad7c1061b54aa5c79b6614847630c72567108bdf84dbf18d025ed692b0074cfe.js"
+      integrity="sha256-rXwQYbVKpcebZhSEdjDHJWcQi9&#43;E2/GNAl7WkrAHTP4="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        Unnecesarily detailed tutorial on how to install libreboot/coreboot in the Thinkpad X280.
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/posts/x280libreboot/old/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/x280libreboot/old/">
+  <meta property="og:site_name" content="My Website">
+  <meta property="og:title" content="How to Install Coreboot/Libreboot in Thinkpad X280">
+  <meta property="og:description" content="Unnecesarily detailed tutorial on how to install libreboot/coreboot in the Thinkpad X280.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-05T22:57:55-06:00">
+    <meta property="article:modified_time" content="2026-04-05T22:57:55-06:00">
+    <meta property="article:tag" content="Libreboot">
+    <meta property="article:tag" content="Coreboot">
+    <meta property="article:tag" content="Thinkpad">
+    <meta property="article:tag" content="X280">
+    <meta property="article:tag" content="Spi">
+    <meta property="article:tag" content="Flashprog">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How to Install Coreboot/Libreboot in Thinkpad X280">
+  <meta name="twitter:description" content="Unnecesarily detailed tutorial on how to install libreboot/coreboot in the Thinkpad X280.">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "How to Install Coreboot\/Libreboot in Thinkpad X280",
+    "headline": "How to Install Coreboot\/Libreboot in Thinkpad X280",
+    
+    "abstract": "Unnecesarily detailed tutorial on how to install libreboot\/coreboot in the Thinkpad X280.",
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/x280libreboot\/old\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Alguien Sasaki"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-04-05T22:57:55-06:00",
+    "datePublished": "2026-04-05T22:57:55-06:00",
+    
+    "dateModified": "2026-04-05T22:57:55-06:00",
+    
+    "keywords": ["libreboot","coreboot","thinkpad","x280","spi","flashprog","moderado"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "3553"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/posts/",
+       "name": "Posts",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "How to Install Coreboot Libreboot in Thinkpad X280",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="Alguien Sasaki" />
+  
+  
+    
+      <link href="alguiensasaki@gmail.com" rel="me" />
+    
+      <link href="https://github.com/alguiensasaki" rel="me" />
+    
+      <link href="https://linkedin.com/in/juan-jos%c3%a9-moreno-arenas-0979ab323/" rel="me" />
+    
+      <link href="https://www.youtube.com/@AlguienSasakiMashups/videos" rel="me" />
+    
+      <link href="https://alguiensasaki.net" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  <link rel="alternate" hreflang="en" href="http://localhost:1313/posts/x280libreboot/old/" /><link rel="alternate" hreflang="es" href="http://localhost:1313/es/posts/x280libreboot/old/" />
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="z-40 flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >My Website</a
+  >
+
+    </div>
+    
+      
+      <label id="menu-button" for="menu-controller" class="block sm:hidden">
+        <input type="checkbox" id="menu-controller" class="hidden" />
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="invisible fixed inset-0 z-30 m-auto h-full w-full cursor-default overflow-auto bg-neutral-100/50 opacity-0 backdrop-blur-sm transition-opacity dark:bg-neutral-900/50"
+        >
+          <ul
+            class="mx-auto flex w-full max-w-7xl list-none flex-col overflow-visible px-6 py-6 text-end sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"
+          >
+            <li class="mb-1">
+              <span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"
+                ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></span
+              >
+            </li>
+            
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/posts/"
+                      title="Posts"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Blog</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/tags/"
+                      title="Tags"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Tags</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    
+                    
+                      <button
+                        id="search-button-1"
+                        title="Search (/)"
+                      >
+                        
+                          <span
+                            class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                          ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span><span
+                            class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                            ></span
+                          >
+                        
+                      </button>
+                    
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    
+                    
+  
+    
+    
+      <div class="group relative">
+        <button
+          class="group-dark:hover:text-primary-400 flex w-full items-center justify-end transition-colors group-hover:text-primary-600"
+        >
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <path fill="currentColor" d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z"/>
+  <path fill="currentColor" d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z"/>
+</svg>
+</span><span class="text-sm">EN</span
+          ><span class="text-[0.6rem]"
+            ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+</span></span
+          >
+        </button>
+        
+          <div class="invisible w-full bg-transparent group-hover:visible"></div>
+        
+        <div
+          class=" invisible absolute z-50 flex flex-col whitespace-nowrap rounded border border-neutral-300 bg-neutral text-start text-base shadow group-hover:visible dark:border-neutral-600 dark:bg-neutral-800 ltr:right-0 rtl:left-0"
+        >
+          
+          
+            
+              <div class="flex flex-grow">
+                
+                  <a
+                    href="http://localhost:1313/posts/x280libreboot/old/"
+                    class="flex w-full items-center justify-between bg-primary-100 px-2 py-1 dark:bg-primary-900"
+                    >English
+                    <span class="ms-2 w-6 text-primary-600 dark:text-primary-400"
+                      ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>
+</span></span
+                    >
+                  </a>
+                
+              </div>
+            
+              <div class="flex flex-grow">
+                
+                  <a
+                    href="http://localhost:1313/es/posts/x280libreboot/old/"
+                    class="w-full py-1 pe-10 ps-2 decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                    >Español</a
+                  >
+                
+              </div>
+            
+          
+        </div>
+      </div>
+    
+  
+
+
+                  
+                </li>
+              
+              
+            
+          </ul>
+        </div>
+      </label>
+      
+      <ul class="hidden list-none flex-row text-end sm:flex">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/posts/"
+                  title="Posts"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Blog</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/tags/"
+                  title="Tags"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                
+                
+                  <button
+                    id="search-button-2"
+                    title="Search (/)"
+                  >
+                    
+                      <span
+                        class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                      ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span><span
+                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        ></span
+                      >
+                    
+                  </button>
+                
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                
+                
+  
+    
+    
+      <div class="group relative">
+        <button
+          class="group-dark:hover:text-primary-400 flex w-full items-center justify-end transition-colors group-hover:text-primary-600"
+        >
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <path fill="currentColor" d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z"/>
+  <path fill="currentColor" d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z"/>
+</svg>
+</span><span class="text-sm">EN</span
+          ><span class="text-[0.6rem]"
+            ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+</span></span
+          >
+        </button>
+        
+          <div class="invisible w-full bg-transparent group-hover:visible"></div>
+        
+        <div
+          class=" invisible absolute z-50 flex flex-col whitespace-nowrap rounded border border-neutral-300 bg-neutral text-start text-base shadow group-hover:visible dark:border-neutral-600 dark:bg-neutral-800 ltr:right-0 rtl:left-0"
+        >
+          
+          
+            
+              <div class="flex flex-grow">
+                
+                  <a
+                    href="http://localhost:1313/posts/x280libreboot/old/"
+                    class="flex w-full items-center justify-between bg-primary-100 px-2 py-1 dark:bg-primary-900"
+                    >English
+                    <span class="ms-2 w-6 text-primary-600 dark:text-primary-400"
+                      ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>
+</span></span
+                    >
+                  </a>
+                
+              </div>
+            
+              <div class="flex flex-grow">
+                
+                  <a
+                    href="http://localhost:1313/es/posts/x280libreboot/old/"
+                    class="w-full py-1 pe-10 ps-2 decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                    >Español</a
+                  >
+                
+              </div>
+            
+          
+        </div>
+      </div>
+    
+  
+
+
+              
+            </li>
+          
+          
+
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="http://localhost:1313/"
+      ></a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class=" inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="http://localhost:1313/posts/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="http://localhost:1313/posts/x280libreboot/old/"
+      >How to Install Coreboot/Libreboot in Thinkpad X280</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        How to Install Coreboot/Libreboot in Thinkpad X280
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-04-05 22:57:55 -0600 CST">5 April 2026</time><span class="px-2 text-primary-500">&middot;</span><span>3553 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">17 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+      
+        
+          
+            <a
+              href="http://localhost:1313/tags/libreboot/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Libreboot</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/coreboot/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Coreboot</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/thinkpad/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Thinkpad</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/x280/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >X280</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/spi/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Spi</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/flashprog/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Flashprog</a
+            >
+          
+            <a
+              href="http://localhost:1313/tags/moderado/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Moderado</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#hardware">Hardware</a></li>
+    <li><a href="#external-linux-computer">External Linux Computer</a>
+      <ul>
+        <li><a href="#instalar-flashprog">Instalar Flashprog</a></li>
+        <li><a href="#raspberry-pi-pico">Raspberry Pi Pico</a></li>
+      </ul>
+    </li>
+    <li><a href="#dissasembly-the-x280">Dissasembly the X280</a></li>
+    <li><a href="#respaldo-del-bios-original">Respaldo del bios original.</a>
+      <ul>
+        <li><a href="#localización-del-chip-de-bios">Localización del chip de bios.</a></li>
+        <li><a href="#conectar-el-bios-a-la-pinza-soic-8-para-que-la-reconozca-el-raspberry">Conectar el bios a la pinza soic 8 para que la reconozca el raspberry.</a></li>
+        <li><a href="#hacer-el-backup-ahora-">Hacer el backup ahora 🪑</a></li>
+      </ul>
+    </li>
+    <li><a href="#libreboot">Libreboot.</a></li>
+    <li><a href="#coreboot">Coreboot</a>
+      <ul>
+        <li><a href="#rutas">Rutas</a></li>
+        <li><a href="#compilar-toolchain-de-coreboot">Compilar toolchain de coreboot</a></li>
+        <li><a href="#instalar-ifdtool">instalar ifdtool</a></li>
+        <li><a href="#construir-mebin-arrancable">Construir me.bin arrancable</a></li>
+      </ul>
+    </li>
+    <li><a href="#lo-arruiné-como-vuelvo-al-bios-original">Lo arruiné, como vuelvo al bios original.</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <p>Escribo esta guía e inicio este blog, ya que me hubiera sido de gran utílidad tener algo como esto al momento de instalar coreboot por primera vez en mi Thinkpad X280, si bien la
+<a href="https://doc.coreboot.org/mainboard/lenovo/skylake.html" target="_blank" rel="noreferrer">documentación oficial de coreboot</a> cuenta con todo lo necesario para que uno pueda lograr instalar coreboot por su cuenta
+(que fué lo que yo hice.)
+Lo cierto es que bastantes partes pueden llegar a resultar bastante confusas si es que uno no cuenta con la experiencia necesaria para realizar este tipo de procesos.
+(Y no lo voy a negar, en varias ocasiones llegué a brickear mi laptop por no saber bien lo que estaba haciendo.)</p>
+<p>Bueno, y el blog es tema para otra publicación (si es que llego a escribir acerca de eso, en dicho caso actualizaré acá para que puedan revisar dicha publicación.)</p>
+<p>La Thinkpad X280 no es una computadora que estuviera soportada hasta el momento por el proyecto de libreboot, pero gracias al <a href="https://codeberg.org/libreboot/lbmk/pulls/412" target="_blank" rel="noreferrer">Pull Request #412</a> En el proyecto oficial de libreboot. Ahora es posible instalar libreboot de manera sencilla en este computador. y aprovecho esta publicación para enseñar ambos métodos en caso de que alguien llegase a necesitar algo en concreto y de manera innecesariamente detallada (o almenos eso espero).</p>
+<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300"><strong>Warning!</strong> Quiero recalcar que este no es un proceso para usuarios principiantes.</span>
+</div>
+
+<p>Si bien todo debería salir de manera correcta si sigues esta guía al pie de la letra.
+No se toman en cuenta todos los casos habidos y por haber, ya que se asume que el usuario tiene
+el criterio suficiente para poder resolver algunas variaciones existentes
+(cómo la instalación de dependencias e instalación de programas.)</p>
+<p>De igual modo, si no estás totalmente de que se está haciendo y el porqué y solo decides hacerlo porque suena interesante, primero dejame felicitarte por la gran curiosidad tuya y esas ganas de aprender, en todo caso el estudiar de pies a cabeza el contenido de este post te será de gran ayuda para aprender cosas nuevas. Igualmente te dejo algúnos recursos interesantes acerca del tema para que puedas aprender más.</p>
+<p>Un video.
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/V9-zq4AgsvA?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+</p>
+<p>Otro video.
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/fRpheIAAIz4?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+</p>
+<p>Otro video pq no.
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/96MaWUvaG88?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+</p>
+<p>Sorry por no ponerles más cosas, pero no hay mucho en español :(</p>
+<p>Habiendo dicho eso. No considero que sea algo realmente difícil con los pasos correctos, en realidad lo más difícil es superar el miedo por malograr el hardware, pero como verán, en caso de algún percance siempre podemos restaurar al bios original.</p>
+<h2 id="hardware" class="relative group">Hardware <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#hardware" aria-label="Anchor">#</a></span></h2><p>En el apartado de hardware vamos a necesitar lo siguiente:</p>
+<ul>
+<li>Nuestro Thinkpad x280 (ps sino donde vamos a instalar coreboot)</li>
+<li>otra linux computadora. Y sí, es totalmente necesario ya que de algún lado debemos mandar la orden del raspberry y hablando del raspberry</li>
+<li>Raspberry Pi Pico.</li>
+<li>Pinza SOIC 8.</li>
+<li>Desarmador de cruz.</li>
+</ul>
+<p>Dependiendo de tu raspberry podrías necesitar soldar cables.</p>
+<p>Yo recomiendo conseguir el Raspberry Pi Pico H, que ya tiene los pines soldados (o cualquier otro con pines soldados.)</p>
+<p>Y puedes hacer lo mismo que yo y conseguir:</p>
+<ul>
+<li>una protoboard</li>
+<li>cables</li>
+</ul>
+<p>Para hacer el cableado del raspberry con la pinza usando el esquema mostrado en la <a href="https://libreboot.org/docs/install/spi.html#wiring" target="_blank" rel="noreferrer">documentación oficial de lireboot</a></p>
+<p>Ahora pasamos al computador para programar el raspberry pi Pico.</p>
+<h2 id="external-linux-computer" class="relative group">External Linux Computer <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#external-linux-computer" aria-label="Anchor">#</a></span></h2><ul>
+<li>transicion a la compu *</li>
+</ul>
+<p>Bien, es recomendable usar una distro basada en debian</p>
+<p>Estando en la compu, hay x cosas importantes que hacer, así que presten atención.</p>
+<ul>
+<li>Instalar Flashprog para hacer backup</li>
+<li>Programar el raspberry para que actúe como un escritor de firmware</li>
+<li>Hacer un backup de nuestro bios.</li>
+</ul>
+<p>Lo mas recomendable es utilizar una distro basada en debian (como ubuntu, mint, kali, etc.)</p>
+<h3 id="instalar-flashprog" class="relative group">Instalar Flashprog <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#instalar-flashprog" aria-label="Anchor">#</a></span></h3><p>Por el momento no es posible simplemente hacer:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install flashprog
+</span></span></code></pre></div><p>ya que el paquete no está disponible en los repos de debian 13.</p>
+<p>por lo que hay que compilar desde el código fuente.
+Primero debemos instalar las dependencias necesarias para evitar errores:</p>
+<p>e instalar las dependencias necesarias para poder compilar:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install git build-essential pciutils-dev libpci-dev libftdi1-dev libusb-1.0-0-dev libjaylink-dev libgpiod-dev pkg-config
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://review.sourcearcade.org
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> flashprog
+</span></span><span class="line"><span class="cl">make
+</span></span><span class="line"><span class="cl">sudo make install
+</span></span></code></pre></div><p>y sí ejecutamos</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">flashprog
+</span></span></code></pre></div><p>En nuestra terminal, en vez de tirar un error veremos algo como lo siguiente:</p>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="imgs/x280libreboot/flashprog_log.png" alt="" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p>ahora podemos pasar a programar el raspberry.</p>
+<h3 id="raspberry-pi-pico" class="relative group">Raspberry Pi Pico <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#raspberry-pi-pico" aria-label="Anchor">#</a></span></h3><p>Indagando por otras guías recuerdo que complicaban mucho esta parte. Pero no debe ser así, ya que podemos simplemente ingresar al siguiente enlace:</p>
+<p><a href="https://github.com/opensensor/pico-serprog" target="_blank" rel="noreferrer">Pico serprog</a></p>
+<p>Ir al apartado de releases y descargar el archivo
+$pico_serprog.elf$</p>
+<p>En esta parte conecta tu raspberry al computador</p>
+<ul>
+<li>mostrar un video conectando el raspberry a la compu *</li>
+</ul>
+<p>Ahora abre tu explorador de archivos favorito, en mi caso el default de gnome, nautilus.</p>
+<p>y en el apartado de dispositivos  verás algo como si fuera una &ldquo;memoria usb.&rdquo;</p>
+<p>Simplemente arrastra ese $pico_serprog.elf$ al nuevo medio de almacenamiento. y ya.</p>
+<p>Como ya viste, el medio de almacenamiento se &ldquo;desconectó automaticamente&rdquo; eso es normal, es más, es lo que debería de pasar.</p>
+<p>si listamos los dispositivos de nuestro computador:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls /dev/
+</span></span></code></pre></div><p>podremos ver que un nuevo dispositivos (muy probablmente) llamada ttyACM0 aparecerá ahí * insertar sonidos de explosión mientras se hace zoom al dispositivo*</p>
+<p>Ese es el raspberry y eso es todo. Pero para probarlo debemos desarmar la compu.</p>
+<h2 id="dissasembly-the-x280" class="relative group">Dissasembly the X280 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#dissasembly-the-x280" aria-label="Anchor">#</a></span></h2><p>Volvemos a la camara uhhhh.</p>
+<p>Recordando tener la maquina totalmente apagada * muestra algun video apagando la maquina, cerrandola y dandole vuelta. *</p>
+<p>Ahora debemos quitar los 5 tornillos visibles de la carcasa, la verdad no se que tamaño de destornillador usar, pero el que te perimta quitarlos sirve</p>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/imgs/x280libreboot/x280bottom.jpg" alt="x280bottom.jpg" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p>Ya con la maquina abierta es indispensable el retirar cualquier tipo de energía del sistema, tal y como lo indica la <a href="https://doc.coreboot.org/mainboard/lenovo/skylake.html#:~:text=Disconnect/remove%20all%20batteries%20%28and%20CMOS%20battery%20if%20equipped%29." target="_blank" rel="noreferrer">documentación de coreboot</a></p>
+<p>Para quitar la bateria es necesario desatornillar los 5 tornillos que la mantienen en su lugar, puedes usar el desarmador que usaste para abrir la tapa del computador.
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/imgs/x280libreboot/x280pcb.jpg" alt="x280pcb.jpg" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/imgs/x280libreboot/x280battery.jpg" alt="x280battery.jpg" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p>Para quitar el cmos es necesario quitar la bateria principal, ahora simplemente jalar el conector y listo.</p>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/imgs/x280libreboot/x280cmos.jpg" alt="x280cmos.jpg" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<h2 id="respaldo-del-bios-original" class="relative group">Respaldo del bios original. <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#respaldo-del-bios-original" aria-label="Anchor">#</a></span></h2><h3 id="localización-del-chip-de-bios" class="relative group">Localización del chip de bios. <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#localizaci%c3%b3n-del-chip-de-bios" aria-label="Anchor">#</a></span></h3><p>Ya con la maquina totalmente desenergizada podemos pasar a hacerle maldades a la maquina &gt;:V, lo primero sería el conectar el chip del bios con el raspberry pi pico y verificar que este funcione.</p>
+<p>El chip de bios en cuestión se encuentra en esta parte (señalala pe) en medio del procesador y el puerto WWAN. No bromeo cuando digo que para darme una idea de donde estaba el chip, tuve que entrar a un foro ruso donde tenían fotos de varios modelos de Thinkpad y su localización del bios (tremendos heroes.) Pero decidí confiar en <a href="https://www.reddit.com/r/thinkpad/comments/m0f32y/thinkpad_x280_bios_chip/" target="_blank" rel="noreferrer">este usuario de reddit</a> y efectivamente.</p>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/imgs/x280libreboot/x280bios.jpg" alt="x280bios.jpg" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<h3 id="conectar-el-bios-a-la-pinza-soic-8-para-que-la-reconozca-el-raspberry" class="relative group">Conectar el bios a la pinza soic 8 para que la reconozca el raspberry. <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conectar-el-bios-a-la-pinza-soic-8-para-que-la-reconozca-el-raspberry" aria-label="Anchor">#</a></span></h3><p>Ahora viene uno de los pasos mas difíciles, bueno, realmente no es taaaan difícil, sino estresante.</p>
+<p>Si siguieron la guía del cableado de libreboot y dependiendo de su modelo de pinza esto puede variar, pero en mi caso el cable rojo va alineado con el pin 1. Y el pin 1 se identifica por el pequeño punto que tiene el chip en la esquina</p>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/imgs/x280libreboot/x280bioschip.jpg" alt="2026-02-17-08-35-00-063.jpg" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p>Ten mucho cuidado al abrir la pinza, pues hay unas pequeñas resistencias a los lados que podrían llegar a romperse si no se tiene cuidado. Con eso en mente, se debería de ver algo así.</p>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/imgs/x280libreboot/x280biosspi.jpg" alt="x280biosspi.jpg" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p>Y ahora ya podemos probar que nuestro cableado sea el correcto. Para ello hay que volver a nuestro otro computador corriendo linux.</p>
+<p>Si en el ejecutamos:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo flashprog -p serprog:dev<span class="o">=</span>/dev/ttyACM0
+</span></span></code></pre></div><p>Deberíamos ver que se reconce el chip tal y como se muestra en la siguiente imagen.</p>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/imgs/x280libreboot/valid_bios_chip.jpg" alt="2026-02-17-13-40-43-279.jpg" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p>En caso de que aparezca un mensaje como el siguiente:
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/imgs/x280libreboot/not_readble_bios.png" alt="not_readble_bios.png" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p>Tocará ser pacientes y volver a intentar conectar el chip de bios con la pinza o recablear el circuito hasta que el chip se reconozca.
+Como ya mencioné anteriormente, este es uno de los pasos mas dificiles, personalmente me tomó como 12 intentos y varias verificaciones del circuito para que se me reconociera, así que no desesperen.</p>
+<p>Ya habiendo pasado lo mas difícil, recomiendo ni siquiera ver feo a la maquina para que no se vaya a desconectar jajaj.
+Y es precisamente en este momento cuando viene la diversión.</p>
+<h3 id="hacer-el-backup-ahora-" class="relative group">Hacer el backup ahora 🪑 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#hacer-el-backup-ahora-" aria-label="Anchor">#</a></span></h3><p>Lo primero es en la computadora linux externa, escribir el siguiente comando:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo flashprog -p serprog:dev<span class="o">=</span>/dev/ttyACM0 -r x280_original_bios_1.bin
+</span></span></code></pre></div><p>Como ya debería ser obvio, puedes cambiar el nombre de $x280_original_bios_1.bin$ por el que quieras. Este comando puede llegar a tardar más o menos dependiendo de varios factores, como el largo de los cables que hayas usado, como se puede apreciar en mi caso, el largo de los cables de la pinza a mi raspberry es de aproximadamente unos 30 cm y mi cable usb es de 1m, por lo que el hacer el backup me tomó unos 10 minutos aproximadamente, pero tu puedes ser suertudo y que te tome menos.</p>
+<p>Ya habiendo terminado este tiempo, es necesario volver a ejecutar el comando pero diferente (?):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo flashprog -p serprog:dev<span class="o">=</span>/dev/ttyACM0 -r x280_original_bios_2.bin
+</span></span></code></pre></div><p>Esto para verificar que no se haya movido accidentalmente la pinza y leyó un bit incorrecto y sí, eso lo cambia todo, ya que si despues intentas restaurarlo, ps no podrás y habrás brickeado tu Thinkpad X280.</p>
+<p>Personalmente recomiendo el desconectar la pinza y volver a ejecutar:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo flashprog -p serprog:dev<span class="o">=</span>/dev/ttyACM0 -r x280_original_bios_3.bin
+</span></span></code></pre></div><p>y</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo flashprog -p serprog:dev<span class="o">=</span>/dev/ttyACM0 -r x280_original_bios_4.bin
+</span></span></code></pre></div><p>Pero si no te sientes muy comodo haciendo eso, o el lograr que la compu reconozca el chip del bios, puedes hacer solo los 2 backups.</p>
+<p>Suponiendo que el directorio donde hiciste tus backups está vacio, puedes ejectuar el siguiente comando:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Otras opciones del comando:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#diff x280*</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#diff *.bin</span>
+</span></span><span class="line"><span class="cl">diff *
+</span></span></code></pre></div><p>y si el comando no devuelve nada, entonces nuestro backup ha sido exitoso. Ahora</p>
+<blockquote>
+<p>[!NOTE]
+GUARDA MUY BIEN ESOS ARCHIVOS!!!!</p>
+</blockquote>
+<p>Ya que en caso de que algo llegase a salir mal (que si sigues esta guia al pie de la letra y tienes un poco de cuidado y sentido común no debería pasar.) no podrás restablecer el bios original.</p>
+<h2 id="libreboot" class="relative group">Libreboot. <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#libreboot" aria-label="Anchor">#</a></span></h2><p>Libreboot es el caso más fácil, pues simplemente es clonar el repo y ejectuar un comando para tener nuestra imagen.
+Para ello clonamos el repositorio oficial de lbmk</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://codeberg.org/libreboot/lbmk
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> lbmk
+</span></span></code></pre></div><p>y definir una variable de entorno para la cantidad de hilos a usar en su compilación.
+La <a href="https://libreboot.org/docs/build/index.html" target="_blank" rel="noreferrer">documentación oficial menciona:</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">XBMK_THREADS</span><span class="o">=</span><span class="m">2</span>
+</span></span></code></pre></div><p>Pero eso dependerá de la cantidad de hilos que tenga la computadora que estés usando para instalar libreboot, por lo que para ahorrarte complicaciones y sacar el mayor rendimiento de tu computadora al momento de compilar simplemente ejecuta:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">XBMK_THREADS</span><span class="o">=</span><span class="k">$(</span>nproc<span class="k">)</span>
+</span></span></code></pre></div><p>La <a href="https://libreboot.org/docs/build/index.html" target="_blank" rel="noreferrer">documentación de libreboot</a> menciona que es necesario ejecutar los siguientes comandos:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;John Doe&#34;</span>
+</span></span><span class="line"><span class="cl">git config --global user.email johndoe@example.com
+</span></span></code></pre></div><p>Pero esto puede llegar a ser un problema en caso de que estés usando tu maquina principal donde ya tengas tu usuario y correo de git configurado para hacer este proceso de instalar libreboot, por lo que podrías llegar a saltartelo si hace falta, en mi caso hice la prueba tanto con las variables puestas como con mis credenciales propias y obtuve la misma imagen, pero es recomendable seguir la guía oficial, por lo tanto otra opción podría ser construirlo en un entorno chroot, que es lo que hice yo, pero al ser un tema más avanzado queda a cuenta de cada uno el investigarlo.</p>
+<p>Ya habiendo puesto todas estas variables, es necesario antes de compilar la imagen el instalar las dependencias.
+Como seguro ya lo habia mencionado, solo hay soporte para distros base:</p>
+<ol>
+<li>Debian.</li>
+<li>Fedora.</li>
+<li>Arch Linux.</li>
+</ol>
+<p>(Y todos sus derivados claro está.)
+Y no se que a este punto ya parezco disco rayado pero sí. Siguan siempre la documentación oficial. Bueno pues, habiendo dicho esto, tenemos los <a href="https://libreboot.org/docs/build/#first-install-build-dependencies" target="_blank" rel="noreferrer">siguientes comandos</a>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#./mk dependencies ubuntu #si usas ubuntu</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#./mk dependencies fedora43 #para la versión mas reciente de fedora al momento de escribir esto</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#./mk dependencies arch # para arch y derivados.</span>
+</span></span><span class="line"><span class="cl">./mk dependencies debian --reinstall
+</span></span></code></pre></div><p>Como yo utilizo debian 13 (Trixie) pongo el comando de arriba, pero dependerá de tu distribución.
+Otra cosa a recalcar es que en realidad puedes compilar/instalar libreboot en cualquier distribución de linux, pero deberás instalar las dependencias necesarias para tu distro de manera externa o crear un script específico para tu distro. (Que de hacerlo aprovecha y contribuye al proyecto en codeberg)</p>
+<p>Y ahora ya viene lo bueno, y para dar algo de contexto; tuve que reescribir esta parte, ya que inicialmente el port a Libreboot no era oficial, lo hice yo mismo (sí) y estaba escribiendo la guía en base a un repositorio en mi cuenta de github.
+<a href="https://github.com/AlguienSasaki/X280Libreboot" target="_blank" rel="noreferrer">X280Libreboot</a></p>
+<p>Pero los desarrolladores ya aceptaron mi pull request así que ya no es necesario seguir los pasos que mostré ahí, solo lo menciono como curiosidad (y para farmear aura xd)</p>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/imgs/x280libreboot/github_X280Libreboot_repo.png" alt="mi repo" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p>Bien, ahora dentro del mismo directorio del proyecto lbmk hay que ejecutar el siguiente comando:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./mk -b coreboot x280_vfsp_16mb
+</span></span></code></pre></div><p>Y este es el momento para ir por un cafecito o algo así, porque este comando puede llegar a tomar mucho tiempo dependiendo de la computadora que estés utilizando, yo realicé este procedimiento varias veces en 3 computadoras distintas.</p>
+<ol>
+<li>
+<p>En un Ideapad S145-14AST que le tomó poco más de 2 horas.
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/imgs/x280libreboot/s145st_flashing_1.jpg" alt="2026-02-18-00-14-13-985.jpg" class="mx-auto my-0 rounded-md" />
+</figure>
+
+2026-02-17-15-33-55-442.jpg
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/imgs/x280libreboot/s145st_flashing_2.jpg" alt="2026-02-17-15-33-55-442.jpg" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+</li>
+<li>
+<p>El mismo Thinkpad X280 ya con Libreboot, esto lo menciono porque antes de poner mi pull request me olvidé de olvidar el &ldquo;Hyper Threading&rdquo; que en resumen me dejó con solo 4 hilos a la maquina en este estado le tomó una hora y media aproximadamente. Pero al corregir la configuración el tiempo se redujo drasticamente a unos 40 minutos aproximadamente.</p>
+</li>
+<li>
+<p>Y finalmente en la laptop gamer asus de un amigo. No recuerdo muy bien el modelo, pero tenía un i5 de 11va generación de la serie H, por lo que muy probablemente sería un i5-11400H, a esta computadora  le tomó solo 20 minutos el compilar la imagen (la mayoria fueron solo descargando cosas 💀💀💀)</p>
+</li>
+</ol>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/imgs/x280libreboot/gaming_laptop_flash.jpg" alt="2026-03-13-12-31-13-354.jpg" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p>Habiendo pasado el tiempo veremos que en la carpeta bin/ se habrá generado una carpeta con el nombre de &ldquo;x280_vfsp_16mb&rdquo;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bin
+</span></span><span class="line"><span class="cl">└── x280_vfsp_16mb
+</span></span><span class="line"><span class="cl">    ├── seabios_x280_vfsp_16mb_libgfxinit_corebootfb.rom
+</span></span><span class="line"><span class="cl">    ├── seabios_x280_vfsp_16mb_libgfxinit_txtmode.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_colemak.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_deqwertz.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_dkqwerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_esqwerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_frazerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_frdvbepo.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_itqwerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_noqwerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_ptqwerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_svenska.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_trqwerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_ukdvorak.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_ukqwerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_usdvorak.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_usqwerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_txtmode_colemak.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_txtmode_deqwertz.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_txtmode_dkqwerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_txtmode_esqwerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_txtmode_frazerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_txtmode_frdvbepo.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_txtmode_itqwerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_txtmode_noqwerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_txtmode_ptqwerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_txtmode_svenska.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_txtmode_trqwerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_txtmode_ukdvorak.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_txtmode_ukqwerty.rom
+</span></span><span class="line"><span class="cl">    ├── seagrub_x280_vfsp_16mb_libgfxinit_txtmode_usdvorak.rom
+</span></span><span class="line"><span class="cl">    └── seagrub_x280_vfsp_16mb_libgfxinit_txtmode_usqwerty.rom
+</span></span><span class="line"><span class="cl"><span class="m">2</span> directories, <span class="m">32</span> files
+</span></span></code></pre></div><ul>
+<li>insertar el yata de shikanoko xd *</li>
+</ul>
+<p>Antes de que nos emocionemos al flasear libreboot en nuestro thinkpad x280, es necesario el saber que es lo que hace cada uno de estos archivos.</p>
+<ol>
+<li>
+<p>Primero tenemos las palabras seabios/seagrub, esto dependerá de si queremos tanto seabios + grub  como payload o solo seabios.</p>
+</li>
+<li>
+<p>Luego está el x280_vfsp_16mb, esto indica el modelo de la placa madre y el tipo de chip de bios, como no hay variaciones en este modelo pues no hay que escoger nada, pero en otros como el t440p si que habría que tenerlo en cuenta.</p>
+</li>
+<li>
+<p>libgfxinit es el modo de como se inician los graficos, o algo así, realmente no estoy tan seguro, pero lo importante es que tampoco hay que pensarse la demasiado.</p>
+</li>
+<li>
+<p>Ahora donde si hay que escoger corebootfb/txtmode, el primero si nos iniciará una interfáz grafica y mostrará letras, mientras que la segunda no muestra nada y se va al arranque directamente. Por lo que en la mayoría de los casos querrás escoger corebootfb.</p>
+</li>
+<li>
+<p>Finalmente viene la distribución de teclado como se puede apreciar está disponible colemak,qwerty y dvorak; aparentemente no se debe elegir nada en caso de usar colemak, pero en el caso de las otras 2 podrás ver un prefijo antes del nombre de la distribución de teclado. En caso de tener un teclado en español deberás escoger esqwerty que viene de es + qwerty. Personalmente tengo un teclado en inglés con la distribución qwerty por lo que yo escogería la de la terminación usqwerty.</p>
+</li>
+</ol>
+<p>Tremenda explicación, pero considero que es totalmente necesario para entender que estás flasheando y no se te quede la pantalla en negro.</p>
+<p>Suponiendo que sigues en el directorio raíz del proyecto lbmk, nos movemos a la carpeta con la imagen final de libreboot.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> bin/x280_vfsp_16mb
+</span></span><span class="line"><span class="cl">ls
+</span></span></code></pre></div><p>y si deberemos ver los mismos archivos .rom que mancionaba arriba:</p>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/imgs/x280libreboot/x280_libreboot_available_roms.png" alt="ls del directorio" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p>Ahora, finalmente podemos flashear libreboot en nuestro Thinkpad X280
+con el siguiente comando:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#sudo flashprog -p serprog:dev=/dev/ttyACM0 -w seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_esqwerty.rom #En caso de tener el teclado en español.</span>
+</span></span><span class="line"><span class="cl">sudo flashprog -p serprog:dev<span class="o">=</span>/dev/ttyACM0 -w seagrub_x280_vfsp_16mb_libgfxinit_corebootfb_usqwerty.rom
+</span></span></code></pre></div><p>Claro está que debes escoger la rom que acomode a tus necesidades.
+Este paso toma alrededor de unos 10 minutos, pero puede tardar menos en caso de la longitud de tus cables y todo eso que ya explique arriba. y como advertencia.</p>
+<blockquote>
+<p>No toques la pinza ni el raspberry, es más ni lo mires feo o se vaya a desconectar.</p>
+</blockquote>
+<ul>
+<li>insertar emoji que siempre pone el agate del gato con ojos de trueno xd *</li>
+</ul>
+<p>Si todo salió bien deberíamos ver una pantalla como la siguiente:</p>
+<ul>
+<li>Poner aca la termianl cuando ya se flasheo*</li>
+</ul>
+<p>Lo restante es solo quitar cuidadosamente la pinza del chip de bios del x280 y volverla a ensamblar que es lo mismo que hicimos para desarmarla, pero alreves.</p>
+<ul>
+<li>Mostrar pasos reensamblandola en camara rapida jsjsj *</li>
+</ul>
+<p>Y si ahora intentamos encender el Thinkpad, parpadearán las luces y se apagará, esto es normal porque el bios está reconociendo todo el hardware, por lo que tenle paciencia y reintentalo unas 3 o 4 veces.</p>
+<p>Pero cuando se decida a prender veremos lo siguiente:</p>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/imgs/x280libreboot/x280libreboot.jpg" alt="x280libreboot.jpg" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<ul>
+<li>insertar emoji que siempre pone el agate del gato con ojos de trueno otravez xd y muchas explosiones.*</li>
+</ul>
+<blockquote>
+<p>Ahora debo escribir una conclusión diciendo felicidades por instalar libreboot, pero la neta no se me ocurre nada así que para despues pe :b</p>
+</blockquote>
+<h2 id="coreboot" class="relative group">Coreboot <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#coreboot" aria-label="Anchor">#</a></span></h2><p>Coreboot es considerablemente más difícil de instalar, ya que uno de los principales objetivos de libreboot es hacer coreboot más fácil. Uno aquí debe proporcionar sus propios blobs binarios, eso es algo de lo que ya me encargué al momento de portear Libreboot para el Thinkpad X280, pero eso esa historia de <a href="https://www.example.com" target="_blank" rel="noreferrer">link a mi post del blog donde hablo sobre mi experiencia porteando libreboot al thinkpad x280</a></p>
+<h3 id="rutas" class="relative group">Rutas <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#rutas" aria-label="Anchor">#</a></span></h3><p>Antes de todo, para hacer todo esto se requieren de demasiadas rutas distintas
+por lo que puede llegar a ser confuso si no se tiene demasiada experiencia, así
+que les propongo la siguiente organización donde tenemos un directorio central
+donde irán los demás repositorios, esto para tener todo ordenado y puedan
+simplemente copiar y pegar los comandos en caso de que ya lo entiendan bien todo.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">├── coreboot
+</span></span><span class="line"><span class="cl">├── deguard
+</span></span><span class="line"><span class="cl">├── Dell-PFS-BIOS-Assembler
+</span></span><span class="line"><span class="cl">└── original_bios
+</span></span></code></pre></div><p>Por ahora no es necesario que crees ninguno de los directorios, ya que muchos de
+ellos son repositorios que vamos a clonar más tarde, lo que si que necesitas es crear el directorio
+$original_bios$.</p>
+<p>Empezando con el siguiente árbol de directorios:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">└── original_bios
+</span></span></code></pre></div><p>Y como ya lo debieron haber adivinado, aquí es donde pondremos nuestro archivo $x280_original_bios_1.bin$ que extrajimos en el paso [hacer el backup del bios][### Hacer el backup ahora 🪑] aquí ya no es opcional hacer el backup del bios orignal porque necesitamos extraer los blobs binarios por nuestra cuenta.
+Especificamente los siguientes:</p>
+<ol>
+<li>ifd.bin (Flash Descriptor)</li>
+<li>me.bin (Intel Management Engine)</li>
+<li>gbe.bin (Gigabit Ethernet)</li>
+</ol>
+<p>Pero bueno, nom me adelanto, por ahora deberemos quedar con el siguiente árbol de directorios:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">└── original_bios
+</span></span><span class="line"><span class="cl">    └── x280_original_bios_1.bin
+</span></span></code></pre></div><p>Ya empezando con lo bueno, debemos construir el toolchain de coreboot y como no podría
+ser de otra manera, la <a href="https://doc.coreboot.org/tutorial/part1.html" target="_blank" rel="noreferrer">documentación oficial</a><br>
+tiene un tutorial bastante detallado de lo que se necesita</p>
+<h3 id="compilar-toolchain-de-coreboot" class="relative group">Compilar toolchain de coreboot <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#compilar-toolchain-de-coreboot" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://review.coreboot.org/coreboot
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> coreboot
+</span></span><span class="line"><span class="cl">make crossgcc-i386 <span class="nv">CPUS</span><span class="o">=</span><span class="k">$(</span>nproc<span class="k">)</span>
+</span></span></code></pre></div><p>Lo de más no es necesario seguirlo ya no queremos la configuración para una maquina virtual
+con qemu, si no del Thinkpad X280. Tambien a recalcar que este proceso va a tardar bastante,
+por lo que idealmente lo dejarías de fondo mientras que haces otra cosa.</p>
+<p>Ahora hay que instalar ifdtool para poder extraer nuestros blobs binarios, para eso se ejecutan
+los siguientes comandos:</p>
+<h3 id="instalar-ifdtool" class="relative group">instalar ifdtool <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#instalar-ifdtool" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> ./util/ifdtool
+</span></span><span class="line"><span class="cl">sudo make install
+</span></span></code></pre></div><p>Ya con ifdtool instalado, volvemos al directorio donde tenemos nuestro bios original</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> ../../../original_bios
+</span></span><span class="line"><span class="cl">ifdtool -x -p sklkbl x280_original_bios_1.bin
+</span></span></code></pre></div><p>Acá verás algunos fallos, pero no te preoucpes, no son relevantes, los 2 archivos que necesitamos se extrajeron correctamente.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp flashregion_0_flashdescriptor.bin ../coreboot/binaries/ifd.bin
+</span></span><span class="line"><span class="cl">cp flashregion_3_gbe.bin binaries ../coreboot/binaries/gbe.bin
+</span></span></code></pre></div><p>En este punto puede que te estés preguntando ¿Y el me.bin? pues ese no es neceario. Ya que
+nosotros vamos a construir uno propio ya con el Intel Management Engine ya neutralizado,
+de no hacerlo nuestra imagen de coreboot no va a arrancar nunca (me pasó)</p>
+<h3 id="construir-mebin-arrancable" class="relative group">Construir me.bin arrancable <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#construir-mebin-arrancable" aria-label="Anchor">#</a></span></h3><p>Primero necesitamos estar en el directorio principal y clonar los siguientes repositorios:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/vuquangtrong/Dell-PFS-BIOS-Assembler
+</span></span><span class="line"><span class="cl">git clone <span class="s2">&#34;https://review.coreboot.org/deguard&#34;</span>
+</span></span></code></pre></div><p>Quedando con el siguiente árbol de directorios:</p>
+<pre tabindex="0"><code>.
+├── coreboot
+├── deguard
+├── Dell-PFS-BIOS-Assembler
+└── original_bios
+
+5 directories
+</code></pre><p>Tal y como lo menciona el apartado de <a href="https://doc.coreboot.org/mainboard/lenovo/skylake.html#preparing-the-me-with-deguard" target="_blank" rel="noreferrer">Preparar el ME con deguard</a>
+hace falta descargar el archivo $Inspiron&hellip;exe$ para ello hacemos lo siguiente:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> Dell-PFS-BIOS-Assembler
+</span></span><span class="line"><span class="cl">wget https://web.archive.org/web/20241110222323/https://dl.dell.com/FOLDER04573471M/1/Inspiron_5468_1.3.0.exe
+</span></span></code></pre></div><p>y ahora podemos hacer exactamente el mismo comando que menciona la documentación</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python Dell_PFS_Extract.py Inspiron_5468_1.3.0.exe
+</span></span></code></pre></div><p>Acá algo que no menciona la documentación es que no se genera ningún archivo llamado
+&ldquo;me_donor.bin&rdquo;</p>
+<h2 id="lo-arruiné-como-vuelvo-al-bios-original" class="relative group">Lo arruiné, como vuelvo al bios original. <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#lo-arruin%c3%a9-como-vuelvo-al-bios-original" aria-label="Anchor">#</a></span></h2><p>Acá en inglich sería algo tipo:</p>
+<p>I messed up, how I restore the original bios.</p>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="460"
+        height="460"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="Alguien Sasaki"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/face.png"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          Alguien Sasaki
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">Unnecesary large text because why not</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="alguiensasaki@gmail.com"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/alguiensasaki"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/juan-jos%c3%a9-moreno-arenas-0979ab323/"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://www.youtube.com/@AlguienSasakiMashups/videos"
+          target="_blank"
+          aria-label="Youtube"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://alguiensasaki.net"
+          target="_blank"
+          aria-label="Link"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="http://localhost:1313/posts/preptimecoreboot/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Prep Time para coreboot</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-04-05 22:57:55 -0600 CST">5 April 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="http://localhost:1313/posts/x280coreboot/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Coreboot X280</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-04-05 22:57:55 -0600 CST">5 April 2026</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+        
+          
+        
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            Alguien Sasaki
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

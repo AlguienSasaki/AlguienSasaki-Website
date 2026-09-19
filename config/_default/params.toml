@@ -26,9 +26,9 @@ fingerprintAlgorithm = "sha256"
   showTitle = true
 
 [footer]
+  showAppearanceSwitcher = false
   showCopyright = true
   showThemeAttribution = true
-  showAppearanceSwitcher = false
   showScrollToTop = true
 
 [homepage]

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Heads on Alguien Sasaki&#39;s Vault</title>
+    <link>http://localhost:1313/tags/heads/</link>
+    <description>Recent content in Heads on Alguien Sasaki&#39;s Vault</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 05 Apr 2026 22:57:55 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/heads/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prep time for coreboot and distros.</title>
+      <link>http://localhost:1313/posts/preptimecoreboot/</link>
+      <pubDate>Sun, 05 Apr 2026 22:57:55 -0400</pubDate>
+      <guid>http://localhost:1313/posts/preptimecoreboot/</guid>
+      <description>Essential preparation steps to install coreboot/libreboot/heads.</description>
+    </item>
+  </channel>
+</rss>
