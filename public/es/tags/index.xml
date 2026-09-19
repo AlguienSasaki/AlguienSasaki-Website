@@ -2,115 +2,115 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Mi sitio web.</title>
-    <link>http://localhost:1313/es/tags/</link>
+    <link>http://localhost:42557/es/tags/</link>
     <description>Recent content in Tags on Mi sitio web.</description>
     <generator>Hugo</generator>
     <language>es</language>
     <lastBuildDate>Sun, 05 Apr 2026 22:57:55 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/es/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:42557/es/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Alta</title>
-      <link>http://localhost:1313/es/tags/alta/</link>
+      <link>http://localhost:42557/es/tags/alta/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0800</pubDate>
-      <guid>http://localhost:1313/es/tags/alta/</guid>
+      <guid>http://localhost:42557/es/tags/alta/</guid>
       <description></description>
     </item>
     <item>
       <title>Coreboot</title>
-      <link>http://localhost:1313/es/tags/coreboot/</link>
+      <link>http://localhost:42557/es/tags/coreboot/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0800</pubDate>
-      <guid>http://localhost:1313/es/tags/coreboot/</guid>
+      <guid>http://localhost:42557/es/tags/coreboot/</guid>
       <description></description>
     </item>
     <item>
       <title>Flashprog</title>
-      <link>http://localhost:1313/es/tags/flashprog/</link>
+      <link>http://localhost:42557/es/tags/flashprog/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0800</pubDate>
-      <guid>http://localhost:1313/es/tags/flashprog/</guid>
+      <guid>http://localhost:42557/es/tags/flashprog/</guid>
       <description></description>
     </item>
     <item>
       <title>Lbmk</title>
-      <link>http://localhost:1313/es/tags/lbmk/</link>
+      <link>http://localhost:42557/es/tags/lbmk/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0800</pubDate>
-      <guid>http://localhost:1313/es/tags/lbmk/</guid>
+      <guid>http://localhost:42557/es/tags/lbmk/</guid>
       <description></description>
     </item>
     <item>
       <title>Libreboot</title>
-      <link>http://localhost:1313/es/tags/libreboot/</link>
+      <link>http://localhost:42557/es/tags/libreboot/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0800</pubDate>
-      <guid>http://localhost:1313/es/tags/libreboot/</guid>
+      <guid>http://localhost:42557/es/tags/libreboot/</guid>
       <description></description>
     </item>
     <item>
       <title>Spi</title>
-      <link>http://localhost:1313/es/tags/spi/</link>
+      <link>http://localhost:42557/es/tags/spi/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0800</pubDate>
-      <guid>http://localhost:1313/es/tags/spi/</guid>
+      <guid>http://localhost:42557/es/tags/spi/</guid>
       <description></description>
     </item>
     <item>
       <title>Thinkpad</title>
-      <link>http://localhost:1313/es/tags/thinkpad/</link>
+      <link>http://localhost:42557/es/tags/thinkpad/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0800</pubDate>
-      <guid>http://localhost:1313/es/tags/thinkpad/</guid>
+      <guid>http://localhost:42557/es/tags/thinkpad/</guid>
       <description></description>
     </item>
     <item>
       <title>X280</title>
-      <link>http://localhost:1313/es/tags/x280/</link>
+      <link>http://localhost:42557/es/tags/x280/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0800</pubDate>
-      <guid>http://localhost:1313/es/tags/x280/</guid>
+      <guid>http://localhost:42557/es/tags/x280/</guid>
       <description></description>
     </item>
     <item>
       <title>Backup</title>
-      <link>http://localhost:1313/es/tags/backup/</link>
+      <link>http://localhost:42557/es/tags/backup/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0600</pubDate>
-      <guid>http://localhost:1313/es/tags/backup/</guid>
+      <guid>http://localhost:42557/es/tags/backup/</guid>
       <description></description>
     </item>
     <item>
       <title>Moderado</title>
-      <link>http://localhost:1313/es/tags/moderado/</link>
+      <link>http://localhost:42557/es/tags/moderado/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0600</pubDate>
-      <guid>http://localhost:1313/es/tags/moderado/</guid>
+      <guid>http://localhost:42557/es/tags/moderado/</guid>
       <description></description>
     </item>
     <item>
       <title>Dissasembly</title>
-      <link>http://localhost:1313/es/tags/dissasembly/</link>
+      <link>http://localhost:42557/es/tags/dissasembly/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0500</pubDate>
-      <guid>http://localhost:1313/es/tags/dissasembly/</guid>
+      <guid>http://localhost:42557/es/tags/dissasembly/</guid>
       <description></description>
     </item>
     <item>
       <title>Facil</title>
-      <link>http://localhost:1313/es/tags/facil/</link>
+      <link>http://localhost:42557/es/tags/facil/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0500</pubDate>
-      <guid>http://localhost:1313/es/tags/facil/</guid>
+      <guid>http://localhost:42557/es/tags/facil/</guid>
       <description></description>
     </item>
     <item>
       <title>Heads</title>
-      <link>http://localhost:1313/es/tags/heads/</link>
+      <link>http://localhost:42557/es/tags/heads/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0400</pubDate>
-      <guid>http://localhost:1313/es/tags/heads/</guid>
+      <guid>http://localhost:42557/es/tags/heads/</guid>
       <description></description>
     </item>
     <item>
       <title>Pico-Serprog</title>
-      <link>http://localhost:1313/es/tags/pico-serprog/</link>
+      <link>http://localhost:42557/es/tags/pico-serprog/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0400</pubDate>
-      <guid>http://localhost:1313/es/tags/pico-serprog/</guid>
+      <guid>http://localhost:42557/es/tags/pico-serprog/</guid>
       <description></description>
     </item>
     <item>
       <title>Raspberry Pi</title>
-      <link>http://localhost:1313/es/tags/raspberry-pi/</link>
+      <link>http://localhost:42557/es/tags/raspberry-pi/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0400</pubDate>
-      <guid>http://localhost:1313/es/tags/raspberry-pi/</guid>
+      <guid>http://localhost:42557/es/tags/raspberry-pi/</guid>
       <description></description>
     </item>
   </channel>

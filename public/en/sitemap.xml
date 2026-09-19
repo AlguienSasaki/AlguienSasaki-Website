@@ -4,57 +4,34 @@
   
     
       <url>
-            <loc>http://localhost:1313/</loc>
+            <loc>http://localhost:42557/</loc>
             <lastmod>2026-04-05T22:57:55-08:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="es"
-              href="http://localhost:1313/es/"
+              href="http://localhost:42557/es/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="http://localhost:1313/"
+              href="http://localhost:42557/"
               />
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/posts/</loc>
+            <loc>http://localhost:42557/posts/</loc>
             <lastmod>2026-04-05T22:57:55-08:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="es"
-              href="http://localhost:1313/es/posts/"
+              href="http://localhost:42557/es/posts/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="http://localhost:1313/posts/"
-              />
-          </url>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/posts/x280libreboot/</loc>
-            <lastmod>2026-04-05T22:57:55-08:00</lastmod>
-            <xhtml:link
-              rel="alternate"
-              hreflang="es"
-              href="http://localhost:1313/es/posts/x280libreboot/"
-              />
-            <xhtml:link
-              rel="alternate"
-              hreflang="en"
-              href="http://localhost:1313/posts/x280libreboot/"
+              href="http://localhost:42557/posts/"
               />
           </url>
     
@@ -66,6 +43,29 @@
     
   
     
+      <url>
+            <loc>http://localhost:42557/posts/x280libreboot/</loc>
+            <lastmod>2026-04-05T22:57:55-08:00</lastmod>
+            <xhtml:link
+              rel="alternate"
+              hreflang="es"
+              href="http://localhost:42557/es/posts/x280libreboot/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="en"
+              href="http://localhost:42557/posts/x280libreboot/"
+              />
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
   
     
   
@@ -75,17 +75,17 @@
   
     
       <url>
-            <loc>http://localhost:1313/posts/x280biosbackup/</loc>
+            <loc>http://localhost:42557/posts/x280biosbackup/</loc>
             <lastmod>2026-04-05T22:57:55-06:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="es"
-              href="http://localhost:1313/es/posts/x280biosbackup/"
+              href="http://localhost:42557/es/posts/x280biosbackup/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="http://localhost:1313/posts/x280biosbackup/"
+              href="http://localhost:42557/posts/x280biosbackup/"
               />
           </url>
     
@@ -94,17 +94,17 @@
   
     
       <url>
-            <loc>http://localhost:1313/posts/x280dissasembly/</loc>
+            <loc>http://localhost:42557/posts/x280dissasembly/</loc>
             <lastmod>2026-04-05T22:57:55-05:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="es"
-              href="http://localhost:1313/es/posts/x280dissasembly/"
+              href="http://localhost:42557/es/posts/x280dissasembly/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="http://localhost:1313/posts/x280dissasembly/"
+              href="http://localhost:42557/posts/x280dissasembly/"
               />
           </url>
     
@@ -119,17 +119,17 @@
   
     
       <url>
-            <loc>http://localhost:1313/posts/preptimecoreboot/</loc>
+            <loc>http://localhost:42557/posts/preptimecoreboot/</loc>
             <lastmod>2026-04-05T22:57:55-04:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="es"
-              href="http://localhost:1313/es/posts/preptimecoreboot/"
+              href="http://localhost:42557/es/posts/preptimecoreboot/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="http://localhost:1313/posts/preptimecoreboot/"
+              href="http://localhost:42557/posts/preptimecoreboot/"
               />
           </url>
     
