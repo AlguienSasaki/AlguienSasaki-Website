@@ -2,17 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Backup on Mi sitio web.</title>
-    <link>http://localhost:42557/es/tags/backup/</link>
+    <link>http://localhost:1313/es/tags/backup/</link>
     <description>Recent content in Backup on Mi sitio web.</description>
     <generator>Hugo</generator>
     <language>es</language>
-    <lastBuildDate>Sun, 05 Apr 2026 22:57:55 -0600</lastBuildDate>
-    <atom:link href="http://localhost:42557/es/tags/backup/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/es/tags/backup/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Respaldar BIOS en Thinkpad X280</title>
-      <link>http://localhost:42557/es/posts/x280biosbackup/</link>
+      <link>http://localhost:1313/es/posts/x280biosbackup/</link>
       <pubDate>Sun, 05 Apr 2026 22:57:55 -0600</pubDate>
-      <guid>http://localhost:42557/es/posts/x280biosbackup/</guid>
+      <guid>http://localhost:1313/es/posts/x280biosbackup/</guid>
       <description>Guía rapida de como respaldar el bios en un Thinkpad X280.</description>
     </item>
   </channel>
